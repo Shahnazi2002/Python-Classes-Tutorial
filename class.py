@@ -80,10 +80,53 @@ class Member:
         return f"ID: {self.id}\nName: {self.first_name} {self.last_name}\nAge: {2022-self.birthyear}"
 
 
+
 m1 = Member(1001, "Mohammad", "Shahnazi", 2002)
 print(m1)                                                                                               # ID: 1001
                                                                                                         # Name: Mohammad Shahnazi
                                                                                                         # Age: 20
+
+
+print("\n------------------------\n")
+
+
+class MyClass:
+    pass
+
+
+class Car:
+    def __init__(self, color, year):
+        self.color = color
+        self.year = year
+
+    def __str__(self):
+        return f"\n{self.__class__.__name__}:\nColor: {self.color}\nBuild Year: {self.year}"
+
+
+class Taxi(Car):
+    pass
+
+
+class Bus(Car):
+    pass
+
+
+
+obj = MyClass()
+print(obj.__class__.__name__)                                                                           # MyClass
+
+car1 = Car("Black", 2021)
+print(car1)                                                                                             # Car:
+                                                                                                        # Color: Black
+                                                                                                        # Build Year: 2021
+car2 = Taxi("Yellow", 2015)
+print(car2)                                                                                             # Taxi:
+                                                                                                        # Color: Yellow
+                                                                                                        # Build Year: 2015
+car3 = Bus("Red", 2018)
+print(car3)                                                                                             # Bus:
+                                                                                                        # Color: Red
+                                                                                                        # Build Year: 2018
 
 
 print("\n------------------------\n")
