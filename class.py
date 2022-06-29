@@ -7,8 +7,8 @@ class Person:
 
 
 
-p1 = Person("Mohammad Shahnazi", 20)
-print("Name:", p1.name)                                                                                 # Name: Mohammad Shahnazi
+p1 = Person("Mohammad", 20)
+print("Name:", p1.name)                                                                                 # Name: Mohammad
 print("Age:", p1.age)                                                                                   # Age: 20
 
 
@@ -27,9 +27,7 @@ class Person:
 
 
 p1 = Person("Mohammad", "Shahnazi", 20)
-p2 = Person("Reza", "Barghi", 32)
-p1.full_name()                                                                                          # Mohammad Shahnazi
-p2.full_name()                                                                                          # Reza Barghi
+p1.full_name()                                                                                          # Mohammad Shahnazi                                                                                         # Reza Barghi
 
 
 print("\n------------------------\n")
