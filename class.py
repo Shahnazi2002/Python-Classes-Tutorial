@@ -130,3 +130,47 @@ print(car3)                                                                     
 
 
 print("\n------------------------\n")
+
+
+class Person:
+    def __init__(self, first_name, last_name, birthyear):
+        self.name = f"{first_name} {last_name}"
+        self.age = 2022 - birthyear
+
+    def info(self):
+        print(f"\nName: {self.name}\nAge: {self.age}")
+
+
+class Student(Person):
+    def __init__(self, first_name, last_name, birthyear, university):
+        super().__init__(first_name, last_name, birthyear)
+        self.university = university
+
+    def info(self):
+        print(f"\nName: {self.name}\nAge: {self.age}\nUniversity: {self.university}")
+
+
+class Driver(Person):
+    def __init__(self, first_name, last_name, birthyear, licence_class):
+        super().__init__(first_name, last_name, birthyear)
+        self.licence_class = licence_class
+
+    def info(self):
+        print(f"\nName: {self.name}\nAge: {self.age}\nLicence: Class {self.licence_class}")
+
+
+
+p1 = Person("Reza", "Barghi", 2004)
+p1.info()                                                                                               # Name: Reza Barghi
+                                                                                                        # Age: 18
+p2 = Student("Mohammad", "Shahnazi", 2002, "Azarbaijan Shahid Madani University")
+p2.info()                                                                                               # Name: Mohammad Shahnazi
+                                                                                                        # Age: 20
+                                                                                                        # University: Azarbaijan Shahid Madani University
+p3 = Driver("Amin", "Shahnazi", 1985, "A")
+p3.info()                                                                                               # Name: Amin Shahnazi
+                                                                                                        # Age: 37
+                                                                                                        # Licence: Class A
+
+
+print("\n------------------------\n")
